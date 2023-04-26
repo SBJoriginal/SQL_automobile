@@ -1,0 +1,101 @@
+16472,"Courroie de distribution","Moteur",0.5,"La courroie de distribution synchronise le mouvement des pistons et des soupapes pour une combustion efficace et évite les collisions internes du moteur",150,2023-04-17
+28013,"Batterie","Circuit électrique",20.0,"La batterie fournit lénergie électrique nécessaire au démarrage du moteur et à lalimentation des différents équipements électriques de la voiture",100,2018-05-10
+33921,"Bobine dallumage","Moteur",0.2,"La bobine dallumage fournit la tension électrique nécessaire pour produire létincelle qui allume le mélange air-carburant dans le cylindre du moteur",25,2020-03-15
+45364,"Pompe à carburant","Réservoir à carburant",1.0,"La pompe à carburant aspire le carburant du réservoir et le transporte vers le moteur pour la combustion",80,2019-09-16
+59876,"Roulement de roue","Roue", 0.5,"Le roulement de roue permet la rotation des roues avec un minimum de frottement et dusure", 30,2023-01-07
+61428,"Plaquettes de frein","Étrier de frein", 0.5,"Les plaquettes de frein frottent contre le disque de frein pour ralentir la voiture en convertissant lénergie cinétique en chaleur", 70,2020-12-20
+73165,"Filtre à huile","Moteur", 0.2,"Le filtre à huile élimine les impuretés et les contaminants de lhuile moteur pour maintenir la lubrification optimale des pièces du moteur", 15,2023-04-13
+86729,"Plaquette de frein","Étrier de frein", 0.5,"La plaquette de frein est une pièce de friction qui serre le disque de frein pour ralentir la voiture", 40,2019-03-20
+99316,"Joint de culasse","Moteur", 0.5,"Le joint de culasse scelle le cylindre du moteur pour empêcher les fuites de liquide de refroidissement ou dhuile", 100,2023-04-12
+82403,"Courroie de distribution","Moteur", 0.5,"La courroie de distribution est responsable de synchroniser les mouvements des pistons et des soupapes pour une combustion efficace", 80,2023-04-18
+7542,"Pompe à eau","Moteur", 1.0,"La pompe à eau circule le liquide de refroidissement dans le moteur pour éviter la surchauffe", 120,2020-11-12
+61638,"Capteur doxygène","Échappement", 0.1,"Le capteur doxygène mesure la quantité doxygène dans les gaz déchappement pour aider le système de contrôle des émissions à réguler le mélange air-carburant", 60,2023-08-08
+57451,"Câble dembrayage","Transmission", 0.2,"Le câble dembrayage transmet la force de la pédale dembrayage au mécanisme dembrayage pour permettre un changement de vitesse en douceur", 30,2023-04-18
+42015,"Fusible","Boîte à fusibles", 0.01,"Le fusible protège les circuits électriques en faisant fondre un filament en cas de surtension", 2,2023-04-12
+32137,"Batterie","Moteur", 15.0,"La batterie alimente tous les composants électriques de la voiture et permet de démarrer le moteur", 100,2018-09-04
+25992,"Plaquettes de frein","Frein", 1.0,"Les plaquettes de frein frottent contre le disque de frein pour ralentir la voiture", 50,2022-08-18
+13901,"Courroie de distribution","Moteur", 0.5,"La courroie de distribution synchronise les mouvements des pistons et des soupapes dans le moteur", 150,2023-04-15
+24839,"Roulement de roue","Roue", 0.2,"Le roulement de roue permet à la roue de tourner librement autour de laxe de rotation", 30,2021-11-26
+39823,"Bougie de préchauffage","Moteur", 0.1,"La bougie de préchauffage chauffe lair dans le moteur diesel pour faciliter le démarrage par temps froid", 40,2022-10-31
+45836,"Filtre à carburant","Moteur", 0.2,"Le filtre à carburant élimine les impuretés et les contaminants du carburant avant quil nentre dans le moteur", 25,2023-04-17
+51508,"Joint de culasse","Moteur", 0.5,"Le joint de culasse scelle les cylindres du moteur et assure une combustion efficace", 200,2023-04-12
+68642,"Courroie de distribution","Moteur", 0.5,"La courroie de distribution synchronise les mouvements de la tête de cylindre et du vilebrequin pour un fonctionnement efficace et fiable du moteur", 70,2023-04-17
+71597,"Plaquette de frein","Roue", 1.0,"La plaquette de frein est une pièce clé du système de freinage qui frotte contre le disque de frein pour ralentir la voiture", 40,2020-02-12
+83579,"Roulement de roue","Roue", 0.5,"Le roulement de roue est une pièce qui permet à la roue de tourner librement sur laxe de la roue", 30,2019-12-21
+94826,"Kit dembrayage","Transmission", 5.0,"Le kit dembrayage est une pièce qui permet de désengager temporairement la transmission pour changer de vitesse", 400,2023-11-16
+82065,"Bobine dallumage","Moteur", 0.3,"La bobine dallumage convertit la tension de la batterie en une tension suffisamment élevée pour allumer la bougie dallumage", 50,2019-02-05
+77509,"Étrier de frein","Roue", 2.0,"Létrier de frein est une pièce qui maintient les plaquettes de frein contre le disque de frein pour ralentir la voiture", 150,2020-07-29
+64237,"Silencieux déchappement","Échappement", 5.0,"Le silencieux déchappement réduit le bruit des gaz déchappement en les faisant passer à travers une série de chicanes et de chambres dexpansion", 200,2021-02-19
+57102,"Joint de culasse","Moteur", 0.5,"Le joint de culasse maintient létanchéité entre la culasse et le bloc-cylindres du moteur", 100,2023-12-20
+49436,"Kit dembrayage","Transmission", 5.0,"Le kit dembrayage est composé de plusieurs pièces, dont le disque dembrayage, le mécanisme dembrayage et le volant moteur", 500,2018-12-23
+35923,"Pompe à eau","Moteur", 1.0,"La pompe à eau circule le liquide de refroidissement à travers le moteur pour maintenir la température de fonctionnement optimale", 80,2022-04-11
+21874,"Roulement de roue","Roue", 0.5,"Le roulement de roue permet à la roue de tourner librement sur lessieu sans frottement excessif", 40,2021-08-10
+12409,"Courroie de distribution","Moteur", 0.2,"La courroie de distribution synchronise les mouvements des soupapes et des pistons dans le moteur pour un fonctionnement en douceur", 150,2023-04-18
+23895,"Thermostat","Moteur", 0.1,"Le thermostat régule la température du liquide de refroidissement en ouvrant et en fermant le circuit de refroidissement", 30,2022-06-23
+35507,"Kit de distribution","Moteur", 1.0,"Le kit de distribution comprend la courroie de distribution, les galets tendeurs et les galets enrouleurs pour maintenir la tension optimale sur la courroie", 200,2018-08-22
+48193,"Biellette de direction","Direction", 0.5,"La biellette de direction relie la colonne de direction aux roues avant pour permettre la direction de la voiture", 60,2021-03-08
+51032,"Rotule de suspension","Suspension", 0.5,"La rotule de suspension relie la suspension au moyeu de la roue pour permettre un mouvement vertical et horizontal", 50,2022-11-27
+62765,"Capteur doxygène","Moteur", 0.1,"Le capteur doxygène mesure la quantité doxygène dans les gaz déchappement pour optimiser le mélange air-carburant dans le moteur", 80,2019-10-29
+74721,"Plaquette de frein","Roue", 0.5,"La plaquette de frein est une pièce essentielle du système de freinage qui frotte contre le disque de frein pour ralentir la voiture", 40,2018-06-07
+85948,"Fusée de roue","Roue", 5.0,"La fusée de roue est une pièce centrale de la suspension qui relie le moyeu de roue à lamortisseur et au bras de suspension", 150,2023-04-15
+98526,"Radiateur","Moteur", 5.0,"Le radiateur refroidit le liquide de refroidissement du moteur pour éviter la surchauffe", 100,2023-05-13
+84329,"Sonde lambda","Moteur", 0.1,"La sonde lambda mesure la quantité doxygène dans les gaz déchappement pour réguler le mélange air-carburant", 60,2021-06-01
+71098,"Étrier de frein","Roue", 2.0,"Létrier de frein applique la pression nécessaire sur les plaquettes de frein pour ralentir ou arrêter la voiture", 150,2019-07-14
+67654,"Pompe à eau","Moteur", 1.0,"La pompe à eau maintient le flux de liquide de refroidissement à travers le moteur pour empêcher la surchauffe", 80,2018-04-25
+62345,"Kit dembrayage","Transmission", 5.0,"Le kit dembrayage est un ensemble de pièces qui permettent de connecter et de déconnecter le moteur de la transmission", 500,2022-01-20
+57361,"Jauge à carburant","Tableau de bord",0.2,"La jauge à carburant indique la quantité de carburant restant dans le réservoir de la voiture", 40,2023-04-17
+44627,"Poulie dalternateur","Moteur", 0.5,"La poulie dalternateur entraîne lalternateur pour produire de lélectricité pour la voiture", 30,2023-04-03
+35893,"Barre stabilisatrice","Suspension", 3.0,"La barre stabilisatrice réduit le roulis de la voiture dans les virages pour une meilleure tenue de route", 120,2023-04-02
+21963,"Capteur ABS","Roue", 0.2,"Le capteur ABS mesure la vitesse de rotation de chaque roue pour détecter les blocages de freinage et éviter les dérapages", 80,2023-04-03
+14310,"Filtre à huile","Moteur", 0.2,"Le filtre à huile élimine les impuretés et les débris de lhuile moteur pour protéger le moteur", 20,2023-04-12
+23522,"Piston","Engine", 0.5,"Le piston est un composant clé du moteur qui convertit la pression en énergie mécanique", 50,2023-02-15
+04896,"Disque de frein","Roue", 5.0,"Le disque de frein est une pièce essentielle du système de freinage qui ralentit la voiture en frottant contre les plaquettes de frein", 100,2023-04-15
+41772,"Amortisseur","Suspension", 2.0,"Lamortisseur absorbe les chocs de la route pour une conduite plus confortable et plus sûre", 200,2023-04-02
+56034,"Bougie dallumage","Moteur", 0.1,"La bougie dallumage fournit létincelle nécessaire pour allumer le mélange air-carburant dans le cylindre du moteur", 20,2023-04-04
+62958,"Filtre à air","Moteur", 0.2,"Le filtre à air empêche les impuretés et les débris de pénétrer dans le moteur et maintient ainsi la combustion propre et efficace", 30,2023-04-16
+79214,"Câble dembrayage","Transmission", 0.5,"Le câble dembrayage permet de connecter la pédale dembrayage à la boîte de vitesses pour changer les rapports", 40,2023-04-12
+84763,"Courroie de distribution","Moteur", 0.3,"La courroie de distribution synchronise les mouvements des pistons et des soupapes pour un fonctionnement optimal du moteur", 100,2023-04-12
+98172,"Cardan","Transmission", 3.0,"Le cardan transmet la puissance du moteur aux roues et permet la rotation de ces dernières", 150,2023-03-16
+82689,"Radiateur","Refroidissement", 4.0,"Le radiateur refroidit le liquide de refroidissement qui circule dans le moteur pour éviter la surchauffe", 80,2023-03-29
+79045,"Pompe à eau","Moteur", 1.0,"La pompe à eau fait circuler le liquide de refroidissement dans le moteur pour maintenir une température optimale", 60,2023-03-09
+65827,"Bobine dallumage","Moteur", 0.2,"La bobine dallumage transforme la faible tension de la batterie en une tension élevée pour produire une étincelle dans la bougie dallumage", 25,2023-03-22
+53548,"Roulement de roue","Roue", 0.5,"Le roulement de roue permet à la roue de tourner librement et avec un minimum de frottement", 30,2023-03-08
+47490,"Capteur doxygène","Moteur", 0.1,"Le capteur doxygène mesure la quantité doxygène dans les gaz déchappement pour aider le système de commande du moteur à ajuster le mélange air-carburant", 50,2023-02-07
+33521,"Piston","Engine", 0.5,"Le piston est un composant clé du moteur qui convertit la pression en énergie mécanique", 50,2023-03-29
+34896,"Disque de frein","Roue", 5.0,"Le disque de frein est une pièce essentielle du système de freinage qui ralentit la voiture en frottant contre les plaquettes de frein", 100,2023-04-17
+21772,"Amortisseur","Suspension", 2.0,"Lamortisseur absorbe les chocs de la route pour une conduite plus confortable et plus sûre", 200,2023-04-01
+16034,"Bougie dallumage","Moteur", 0.1,"La bougie dallumage fournit létincelle nécessaire pour allumer le mélange air-carburant dans le cylindre du moteur", 20,2023-03-26
+22958,"Filtre à air","Moteur", 0.2,"Le filtre à air empêche les impuretés et les débris de pénétrer dans le moteur et maintient ainsi la combustion propre et efficace", 30,2023-04-16
+36871,"Courroie de distribution","Moteur", 0.5,"La courroie de distribution est une pièce importante du moteur qui synchronise les mouvements des pistons et des soupapes pour une combustion efficace", 80,2022-04-17
+41095,"Pompe à eau","Moteur", 1.0,"La pompe à eau maintient le moteur à une température optimale en circulant le liquide de refroidissement à travers le bloc moteur et le radiateur", 120,2023-03-03
+54532,"Roulement de roue","Roue", 0.5,"Le roulement de roue est une pièce qui permet à la roue de tourner librement autour de lessieu", 40,2023-04-03
+67863,"Capteur doxygène","Moteur", 0.1,"Le capteur doxygène mesure la quantité doxygène dans les gaz déchappement pour aider à réguler la combustion et réduire les émissions", 60,2023-04-03
+72389,"Thermostat","Moteur", 0.2,"Le thermostat régule la température du moteur en ouvrant ou en fermant le flux de liquide de refroidissement vers le radiateur", 30,2023-03-15
+84576,"Plaquettes de frein","Roue", 1.0,"Les plaquettes de frein sont une partie du système de freinage qui frotte contre le disque de frein pour ralentir la voiture", 50,2023-03-23
+95128,"Rotule de suspension","Suspension", 0.5,"La rotule de suspension relie la roue à la suspension pour permettre un mouvement vertical de la suspension", 60,2023-02-22
+83912,"Joint de culasse","Moteur", 1.0,"Le joint de culasse empêche les fuites de liquide de refroidissement et dhuile entre la culasse et le bloc moteur", 150,2023-04-03
+76543,"Pompe à eau","Moteur", 1.5,"La pompe à eau circule le liquide de refroidissement dans le moteur pour éviter la surchauffe", 120,2023-04-03
+68024,"Courroie de distribution","Moteur", 0.5,"La courroie de distribution synchronise la rotation de larbre à cames et du vilebrequin dans le moteur à combustion interne", 80,2022-04-13
+52796,"Kit dembrayage","Transmission", 5.0,"Le kit dembrayage est un ensemble de pièces qui permettent de transmettre la puissance du moteur à la boîte de vitesses", 500,2023-02-24
+41785,"Cardan","Transmission", 2.5,"Le cardan transmet la puissance du moteur aux roues motrices en permettant une rotation différentielle", 250,2023-04-02
+35328,"Boîte de vitesses","Transmission", 40.0,"La boîte de vitesses permet de modifier le rapport de transmission entre le moteur et les roues pour une conduite plus efficace", 2000,2023-03-29
+27612,"Embout de biellette de direction","Direction", 0.2,"Lembout de biellette de direction permet de connecter la biellette de direction au bras de suspension pour une direction stable et précise", 15,2023-04-13
+19468,"Barre stabilisatrice","Suspension", 3.0,"La barre stabilisatrice relie les deux roues dun essieu pour réduire le roulis et maintenir la stabilité du véhicule", 300,2023-03-03
+22190,"Triangle de suspension","Suspension", 1.5,"Le triangle de suspension relie la roue à la carrosserie du véhicule et absorbe les chocs de la route pour une conduite plus confortable", 100,2023-02-19
+33354,"Rotule de suspension","Suspension", 0.5,"La rotule de suspension relie le triangle de suspension à la fusée de roue pour permettre une direction précise et une suspension efficace", 50,2019-12-04
+47465,"Support moteur","Moteur", 2.0,"Le support moteur maintient le moteur en place dans le compartiment moteur et réduit les vibrations et le bruit", 80,2023-11-03
+54937,"Silencieux","Échappement", 4.0,"Le silencieux réduit le bruit du moteur en absorbant les vibrations et en atténuant le son des gaz déchappement", 150,2020-02-21
+68812,"Catalyseur","Échappement", 3.0,"Le catalyseur réduit les émissions de gaz nocifs en convertissant les gaz déchappement en gaz moins polluants", 200,2018-12-13
+74831,"Roulement de roue","Roue", 0.5,"Le roulement de roue permet aux roues de tourner librement et en douceur", 50,2022-04-27
+86920,"Courroie de distribution","Moteur", 0.2,"La courroie de distribution synchronise le mouvement des pistons et des soupapes dans le moteur", 60,2021-04-12
+97314,"Plaquettes de frein","Roue", 1.0,"Les plaquettes de frein frottent contre le disque de frein pour ralentir ou arrêter la voiture", 70,2019-02-17
+85218,"Pneu","Roue", 10.0,"Le pneu est la partie de la roue qui touche la route et fournit une traction et une adhérence pour la conduite", 100,2020-07-13
+71782,"Radiateur","Moteur", 4.0,"Le radiateur refroidit le liquide de refroidissement qui circule dans le moteur pour éviter la surchauffe", 150,2023-12-30
+69926,"Réservoir de carburant","Carburant", 20.0,"Le réservoir de carburant stocke le carburant qui alimente le moteur de la voiture", 200,2018-06-17
+54271,"Étrier de frein","Roue", 2.0,"Létrier de frein maintient les plaquettes de frein en place et exerce une force sur le disque de frein pour ralentir la voiture", 80,2021-03-02
+46489,"Sonde lambda","Échappement", 0.2,"La sonde lambda mesure la quantité doxygène dans les gaz déchappement pour aider à réguler la combustion dans le moteur", 70,2022-11-11
+35837,"Bobine dallumage","Moteur", 0.5,"La bobine dallumage fournit une haute tension à la bougie dallumage pour créer une étincelle et allumer le mélange air-carburant dans le moteur", 40,2020-04-07
+29375,"Filtre à huile","Moteur", 0.3,"Le filtre à huile retient les impuretés et les débris dans lhuile du moteur pour éviter lusure et la corrosion", 20,2023-04-18
+23952,"Kit de distribution","Moteur", 2.0,"Le kit de distribution contient la courroie de distribution, les galets et la pompe à eau pour assurer le mouvement synchronisé des pistons et des soupapes dans le moteur", 100,2021-02-26
+12791,"Jauge à carburant","Tableau de bord", 0.1,"La jauge à carburant mesure la quantité de carburant dans le réservoir de carburant et laffiche sur le tableau de bord", 30,2023-04-13
+26673,"Catalyseur","Échappement", 3.0,"Le catalyseur transforme les gaz déchappement en produits moins nocifs avant de les relâcher dans lair", 200,2019-10-08

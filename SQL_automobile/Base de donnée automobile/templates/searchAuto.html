@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de recherche</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+   <style>
+      body {
+        background-color: #0D1B2A;
+      }
+    </style>
+<body>
+  <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+           <li><a href="/logout">Se déconnecter</a></li>
+       </ul>
+   </nav>
+
+    <div class="container mt-5">
+        <h1>Résultats de recherche d'un Automobile pour <br> <b><i>"{{ query }}"</i></b></h1>
+        <form action="{{ url_for('searchAuto') }}" method="post" class="search-form">
+            <input type="text" name="queryAuto" placeholder="Nouvelle recherche">
+            <button type="submit">Rechercher </button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Niv</th>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Année</th>
+                    <th>Couleur</th>
+                    <th>Odomètre</th>
+                    <th>Nombre de places</th>
+                    <th>Prix</th>
+                    <th>Location / Vente</th>
+                    <th>Sous-Catégorie</th>
+                    <th>Poids</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                    <td>{{ result[4] }}</td>
+                    <td>{{ result[5] }}</td>
+                    <td>{{ result[6] }}</td>
+                    <td>{{ result[7] }}</td>
+                    <td>{{ result[8] }}</td>
+                    <td>{{ result[9] }}</td>
+                    <td>{{ result[10] }}</td>
+                    <td>{{ result[11] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

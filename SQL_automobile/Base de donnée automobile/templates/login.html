@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page de connexion</title>
+    <title><a href="/sign-up">Page de connexion - Inscrivez-vous</a></title>
+
+
+     <!-- Chargement des fichiers CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Chargement des fichiers JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="application.js"></script>
+    <script src="../static/application.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<style>
+  body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('/static/images/img_4.png');
+    background-color: #0D1B2A;
+  }
+</style>
+
+<body>
+
+ <nav class="nav-area">
+
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="/login">Se connecter</a></li>
+           <li><a href="/sign-up">S'inscrire</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/search">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                       <ul>
+                            <li><a href="/search-employe">Trouver un employé</a>
+                        </ul>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+            <li><a href="/appropos">À propos</a></li>
+       </ul>
+   </nav>
+
+
+    <header>
+        <h1>Entrez vos identifiants pour vous connecter</h1>
+    </header>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <div class="alert-danger alert-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% else %}
+        <div class="alert-success alert-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+    <div class="container mt-5">
+<!--        <h1>Connexion</h1>-->
+        <form  method="POST" class="login-form"> <!--action="/page_utilisateur"-->
+            <div class="form-group">
+                <label for="email">Adresse courriel </label>
+                <input type="email" name="email" id="email" placeholder="Votre adresse courriel ici" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe </label>
+                <input type="password" name="password" id="password" placeholder="Votre mot de passe" required>
+            </div>
+            <button class="btn btn-primary btn-small" type="submit">Se connecter</button>
+
+            <div class="form-group1">
+                <a href="/sign-up">Page de compte? Inscrivez-vous ici</a>
+            </div>
+
+        </form>
+    </div>
+
+<footer class="bg-secondary text-left fixed-bottom py-2">
+
+    <small>© 2023 ConcessionnaireNouvelleAuto. Tous droits réservés.</small>
+
+</footer>
+
+
+</body>
+</html>

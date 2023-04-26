@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de recherche</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+   <style>
+      body {
+        background-color: #0D1B2A;
+      }
+    </style>
+<body>
+   <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+           <li><a href="/logout">Se déconnecter</a></li>
+       </ul>
+   </nav>
+
+    <div class="container mt-5">
+        <h1>Résultats de recherche d'un Employé pour <br> <b><i>"{{ query }}"</i></b></h1>
+        <form action="{{ url_for('searchEmploye') }}" method="POST" class="search-form">
+            <input type="text" name="queryEmploye" placeholder="Nouvelle recherche">
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <button onclick="sortTable()">Trier par id</button>
+        <button onclick="location.reload()">Annuler le tri</button>
+
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Age</th>
+                    <th>Téléphone</th>
+                    <th>Poste</th>
+                    <th>Titre Emploi</th>
+                    <th>Salaire Annuel</th>
+                    <th>Ancienneté</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td><a href="{{ url_for('profilEmploye', id=result[0]) }}">{{ result[0] }}</a></td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                    <td>{{ result[3] }}</td>
+                    <td>{{ result[4] }}</td>
+                    <td>{{ result[5] }}</td>
+                    <td>{{ result[6] }}</td>
+                    <td>{{ result[7] }}$</td>
+                    <td>{{ result[8] }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+<script>
+  $(document).ready(function() {
+    $('#myTable').DataTable({
+      "order": [[ 0, "DESC" ]],// tri par défaut sur la première colonne en ordre ascendant
+
+    });
+  });
+</script>
+
+<script>
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  switching = true;
+  /* Faire une boucle tant que le tri n'est pas terminé */
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("tr");
+    /* Parcourir toutes les lignes à l'exception de l'en-tête */
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      /* Obtenir les deux éléments à comparer */
+      x = rows[i].getElementsByTagName("td")[0];
+      y = rows[i + 1].getElementsByTagName("td")[0];
+      /* Vérifier si les deux lignes doivent être échangées */
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        /* Si c'est le cas, marquer et sortir de la boucle */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* Échanger les deux lignes et marquer que le tri n'est pas terminé */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+
+</body>
+</html>

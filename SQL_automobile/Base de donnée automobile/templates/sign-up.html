@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Inscription - Concessionnaire NouvelleAuto</title>
+   <!-- Chargement des fichiers CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   <!-- Chargement des fichiers JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="application.js"></script>
+    <script src="../static/application.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+   <style>
+      body {
+        background-color: #0D1B2A;
+      }
+    </style>
+
+<body>
+  <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="/login">Se connecter</a></li>
+           <li><a href="/sign-up">S'inscrire</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+       </ul>
+   </nav>
+
+
+
+
+   <header>
+        <h1>Page d'inscription</h1>
+    </header>
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <div class="alert-danger alert-dismissable fade show" role="alert">
+          {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% else %}
+                  {{ message }}
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+   <div class="container mt-5">
+      <form method="POST" class="login-form">
+
+            <div class="form-group1">
+                <a href="/login">Déjà un compte? Connectez-vous ici</a>
+            </div>
+
+          <div class="form-group">
+    <label>Adresse courriel</label>
+    <input type="email" name="email" class="form-control" placeholder="Votre adresse courriel ici" required>
+</div>
+<div class="form-group">
+    <label>Nom</label>
+    <input type="text" name="lastName" class="form-control" placeholder="Votre nom ici" required>
+</div>
+<div class="form-group">
+    <label>Prénom</label>
+    <input type="text" name="firstName" class="form-control" placeholder="Votre prénom ici" required>
+</div>
+<div class="form-group">
+    <label>Sexe</label>
+    <select name="gender" class="form-control" required>
+        <option value="male">Masculin</option>
+        <option value="female">Féminin</option>
+        <option value="autres">Autre</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Date de naissance</label>
+    <input type="date" name="birthdate" class="form-control" placeholder="Votre date de naissance ici" required>
+</div>
+<div class="form-group">
+  <label>Pays</label>
+  <select class="form-control" name="country" required>
+    <option value="" selected disabled hidden>Sélectionnez un pays</option>
+    {% for country in country %}
+    <option value="{{ country.name }}">{{ country.name }}</option>
+    {% endfor %}
+  </select>
+</div>
+<div class="form-group">
+    <label>Téléphone</label>
+    <input type="tel" name="phone" class="form-control" placeholder="Votre numéro de téléphone ici" required>
+</div>
+
+
+
+
+         <div class="form-group">
+            <label>Mot de passe</label>
+            <input type="password" name="password1" class="form-control" placeholder="Votre mot de passe ici" required>
+         </div>
+         <div class="form-group">
+            <label>Confirmer mot de passe</label>
+            <input type="password" name="password2" class="form-control" placeholder="Confirmez votre mot de passe"required>
+         </div>
+         <button class="btn btn-primary btn-small"  type="submit" class="btn btn-primary">S'inscrire</button>
+      </form>
+   </div>
+
+<!--<footer class="bg-secondary text-left fixed-bottom py-2">-->
+
+<!--&lt;!&ndash;    <small>© 2023 ConcessionnaireNouvelleAuto. Tous droits réservés.</small>&ndash;&gt;-->
+
+<!--</footer>-->
+
+</body>
+
+</html>

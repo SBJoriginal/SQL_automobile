@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Recherche</title>
+   <!-- Chargement des fichiers CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Chargement des fichiers JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../static/application.js"></script>
+</head>
+   <style>
+      body {
+        background-color: #0D1B2A;
+      }
+    </style>
+<body>
+  <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+           <li><a href="/logout">Se déconnecter</a></li>
+       </ul>
+   </nav>
+
+  <header>
+        <h1>Ajouter un Fournisseur de Pièces</h1>
+    </header>
+
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      {% if category == 'error' %}
+        <div class="alert-danger alert-dismissable fade show" role="alert">
+          {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% else %}
+                  {{ message }}
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+   <div class="container mt-5">
+      <form action="/add-fournisseur-pieces" method="POST" class="login-form">
+
+         <div class="form-group">
+            <label>Nom</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Nom du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" name="address" id="address" class="form-control" placeholder="Adresse du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Numéro de téléphone</label>
+            <input type="text" name="tel" id="tel" class="form-control" placeholder="# Téléphone du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Adresse courriel</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Ville</label>
+            <input type="text" name="city" id="city" class="form-control" placeholder="Ville du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Province / État</label>
+            <input type="text" name="state" id="state" class="form-control" placeholder="Province / État du fournisseur ici" required>
+         </div>
+         <div class="form-group">
+            <label>Pays</label>
+            <select class="form-control" name="country" id="country" required>
+                <option value="" selected disabled hidden>Sélectionnez un pays</option>
+                    {% for country in country %}
+                <option value="{{ country.name }}">{{ country.name }}</option>
+                    {% endfor %}
+            </select>
+         </div>
+         <button class="btn btn-primary btn-small" onclick="addFournisseurPieces()" type="submit"
+                 class="btn btn-primary">Ajouter</button>
+
+      </form>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-S8MgYsF0a0eX9cQ1L8lAVW2EVlmc7VdOw/D0R8VYpCJvO7Lb9UhfpIjA5PpN5g+q" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

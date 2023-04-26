@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Déconnexion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+    <div class="login-page">
+        <form action="/login" method="GET" class="login-form">
+        <div class="form">
+            <form class="logout-form" action="{{ url_for('logout') }}" method="post">
+                <h3>Vous êtes sur le point de vous déconnecter</h3>
+                <button type="submit">Se déconnecter</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

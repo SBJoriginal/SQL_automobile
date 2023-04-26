@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Profil Employé</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+</head>
+   <style>
+      body {
+        background-color: #0D1B2A;
+		      position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 60vw;
+    background-size: cover;
+    background-image: url('/static/images/img_2.png');
+
+
+
+      }
+    </style>
+
+<body>
+
+
+<nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employes</a></li>
+                    <li><a href="/search-auto">Automobile</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+       </ul>
+   </nav>
+
+	<div id = "my-container" class="container my-5">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-header text-center">
+						<h3>Profil Employé</h3>
+					</div>
+					<div class="card-body">
+						<h3>Prénom : {{ employe[1]}}</h3>
+						<h3>Nom : {{ employe[2] }}</h3>
+						<h3>Age : {{ employe[3] }}</h3>
+						<h3>Téléphone : {{ employe[4] }}</h3>
+						<h3>Poste  : #{{ employe[5] }}</h3>
+						<h3>Emploi : {{ employe[6] }}</h3>
+						<h3>Salaire Annuel : {{ employe[7] }} $</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

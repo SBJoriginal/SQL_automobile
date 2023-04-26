@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de recherche</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+    body {
+        background-color: #0D1B2A;
+    }
+</style>
+<body>
+<nav class="nav-area">
+    <ul>
+        <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="#">Fournisseurs</a>
+            <ul>
+                <li><a href="/add-fournisseur-auto">Automobiles</a>
+                    <ul>
+                        <li><a href="/add-fournisseur-auto">Ajouter</a>
+                        <li><a href="/search-fournisseur-auto">Trouver</a>
+                    </ul>
+                </li>
+                <li><a href="#">Pièces</a>
+                    <ul>
+                        <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                        <li><a href="/search-fournisseur-pieces">Trouver</a>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/searchPiece">Rechercher</a>
+            <ul>
+                <li><a href="/searchPiece">Pièces</a></li>
+                <li><a href="/search-employe">Employés</a></li>
+                <li><a href="/search-auto">Automobiles</a></li>
+                <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+            </ul>
+        </li>
+        <li><a href="/appropos">À propos</a></li>
+        <li><a href="/logout">Se déconnecter</a></li>
+    </ul>
+</nav>
+
+<div class="container mt-5 text-center">
+    <h1> Résultats de recherche d'une piece pour <br> <b><i>"{{ query }}"</i></b></h1>
+    <form action="/searchPiece" method="POST">
+        <input type="text" name="query" placeholder="Nouvelle recherche" >
+
+        <div class="d-flex justify-content-center">
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="ID" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">ID</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="CATEGORY" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">Catégorie</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="POID" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">Poids</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="DESCRIPTION" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">Description</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="PRIX" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">Prix</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" name="piece" value="DATE" class="form-check-input" checked>
+                <label class="form-check-label" for="piece">Date</label>
+            </div>
+        </div>
+        <div class="mt-3 d-flex justify-content-center">
+            <div class="form-check form-check-inline">
+                <input type="radio" name="time" value="last_week" class="form-check-input">
+                <label class="form-check-label" for="time">Semaine</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="time" value="last_month" class="form-check-input">
+                <label class="form-check-label" for="time">Mois</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="time" value="last_year" class="form-check-input">
+                <label class="form-check-label" for="time">Année</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="time" value="all_date" class="form-check-input" checked>
+                <label class="form-check-label" for="time">Tous</label>
+            </div>
+        </div>
+        <div class="mt-3 d-flex justify-content-center ">
+        <button type="submit">Rechercher</button>
+            </div>
+    </form>
+    <table>
+        <thead>
+        <tr>
+            {% for header in headers %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+        <tr>
+            {% for header in headers %}
+            {% if header in row %}
+            <td>{{ row[header] }}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+

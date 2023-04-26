@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page utilisateur</title>
+       <!-- Chargement des fichiers CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Chargement des fichiers JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="application.js"></script>
+    <script src="../static/application.js"></script>
+    <style>
+    body {
+      background-color: #212529;
+      color: whitesmoke;
+    }
+
+    p, h3 {
+      color: white;
+    }
+  </style>
+</head>
+   <style>
+      body {
+        background-color: white;
+      }
+    </style>
+
+<body>
+ <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li>
+           <li><a href="/logout">Se déconnecter</a></li>
+       </ul>
+   </nav>
+
+
+    <header>
+        <h1>Bienvenue sur votre page utilisateur</h1>
+    </header>
+
+    <div class="container mt-7">
+        <h2>Informations sur l'utilisateur</h2>
+        <ul>
+            <li>Nom: John Doe</li>
+            <li>Email: john.doe@example.com</li>
+            <li>Téléphone: 555-555-5555</li>
+            <li>Poste: Technicien </li>
+        </ul>
+        <a href="#" class="btn btn-primary">Modifier les informations</a>
+        <a href="/logout" class="btn btn-danger">Se déconnecter</a>
+    </div>
+<body/>
+
+<html/>

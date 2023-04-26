@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concessionnaire NouvelleAuto </title>
+    <!-- Chargement des fichiers CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Chargement des fichiers JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="application.js"></script>
+    <script src="../static/application.js"></script>
+</head>
+
+<body>
+  <nav class="nav-area">
+       <ul>
+           <li class="logo"><a href="/"><img src="../static/images/logo_1.png" alt="foto"></a></li>
+           <li><a href="/">Accueil</a></li>
+           <li><a href="#">Fournisseurs</a>
+                <ul>
+                    <li><a href="/add-fournisseur-auto">Automobiles</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-auto">Ajouter</a>
+                            <li><a href="/search-fournisseur-auto">Trouver</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pièces</a>
+                        <ul>
+                            <li><a href="/add-fournisseur-pieces">Ajouter</a>
+                            <li><a href="/search-fournisseur-pieces">Trouver</a>
+                        </ul>
+                    </li>
+                </ul>
+           </li>
+           <li><a href="/search">Rechercher</a>
+                <ul>
+                    <li><a href="/searchPiece">Pièces</a></li>
+                    <li><a href="/search-employe">Employés</a></li>
+                    <li><a href="/search-auto">Automobiles</a></li>
+                    <li><a href="/searchLavageAuto">Lavage Auto</a></li>
+                </ul>
+           </li>
+           <li><a href="/appropos">À propos</a></li><li><a href="/logout">Se déconnecter</a></li>
+       </ul>
+
+   </nav>
+
+   <header>
+        <h1>À propos</h1>
+    </header>
+
+   <div id = "my-container-2" class="container mt-5">
+      <h1 class="contact-info">Informations de contact</h1>
+      <p>Téléphone : 123-456-7890</p>
+      <p>Adresse : 123 rue Principale, Montréal, QC, H1H 1H1</p>
+
+      <h1 class="services-heading">Nos services</h1>
+      <ul  class="services-list">
+        <li>Vente de voitures neuves et d'occasions</li>
+        <li>Réparation et entretien de véhicules</li>
+        <li>Vente de pièces </li>
+        <li>Réparation et réchange des pièces</li>
+
+        </ul>
+   </div>
+<style>
+  .contact-info {
+    color: #0077be;
+
+  }
+
+  .services-heading {
+    color: #0077be;
+  }
+
+  .services-list {
+    color: white;
+  }
+</style>
+
+</body>
+</html>
